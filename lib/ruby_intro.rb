@@ -22,15 +22,17 @@ end
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  "Hello, #{name}"
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  not s.match(/^[bcdfghjklmnpqrstvwxyz]/i).nil?
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  return true if s == "0"
+  conversion = s.to_i(2)
+  conversion != 0 and conversion % 4 == 0
 end
 
 # Part 3
@@ -38,3 +40,5 @@ end
 class BookInStock
 # YOUR CODE HERE
 end
+
+puts "235658641".to_i(2)
