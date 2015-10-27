@@ -40,5 +40,3 @@ end
 class BookInStock
 # YOUR CODE HERE
 end
-
-puts "235658641".to_i(2)
