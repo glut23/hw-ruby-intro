@@ -3,15 +3,20 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  return 0 if arr.empty?
+  arr.inject(:+)
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  return 0 if arr.empty?
+  arr.sort {|a,b| b <=> a}.first(2).inject(:+)
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  if arr.length >= 2
+    arr.permutation(2).each { |v1,v2| return true if v1+v2 == n }
+  end
+  return false
 end
 
 # Part 2
